@@ -12,7 +12,7 @@ public class TimestepIdDataKey implements DataKey<TimestepIdDataKey> {
   private final int timestep;
   private final int
       id; // e.g. scenarioElementId (if id refers to pedestrians, use TimeStepPedestrianIdKey
-          // instead)
+  // instead)
 
   public TimestepIdDataKey(int timestep, int id) {
     this.timestep = timestep;

@@ -102,7 +102,7 @@ public class IOVadere {
     logger.info(migrationStats.toString());
     project.setMigrationStats(
         migrationStats); // TODO [priority=low] [task=refactoring] better way to tunnel those
-                         // results to the GUI?
+    // results to the GUI?
     project.setOutputDir(Paths.get(projectPath, IOUtils.OUTPUT_DIR));
     ProjectOutput projectOutput = new ProjectOutput(project);
     project.setProjectOutput(projectOutput);

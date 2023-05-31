@@ -79,11 +79,11 @@ public class TargetVersionV0_8 extends SimpleJsonTransformation {
   public JsonNode applyMeasurementAreaType1(JsonNode scenarioFile) throws MigrationException {
     String[] processorTypes = {
       "org.vadere.simulator.projects.dataprocessing.processor.FundamentalDiagramBProcessor", // type
-                                                                                             // 1
-                                                                                             // (measurementArea -> measurementAreaId)
+      // 1
+      // (measurementArea -> measurementAreaId)
       "org.vadere.simulator.projects.dataprocessing.processor.FundamentalDiagramCProcessor", // type
-                                                                                             // 1
-                                                                                             // (measurementArea -> measurementAreaId)
+      // 1
+      // (measurementArea -> measurementAreaId)
       "org.vadere.simulator.projects.dataprocessing.processor.AreaSpeedProcessor",
     };
 
@@ -101,14 +101,14 @@ public class TargetVersionV0_8 extends SimpleJsonTransformation {
   public JsonNode applyMeasurementAreaType2(JsonNode scenarioFile) throws MigrationException {
     String[] processorTypes = {
       "org.vadere.simulator.projects.dataprocessing.processor.FundamentalDiagramDProcessor", // type
-                                                                                             // 2
-                                                                                             // (measurementArea -> measurementAreaId, voronoiArea -> voronoiMeasurementAreaId)
+      // 2
+      // (measurementArea -> measurementAreaId, voronoiArea -> voronoiMeasurementAreaId)
       "org.vadere.simulator.projects.dataprocessing.processor.FundamentalDiagramEProcessor", // type
-                                                                                             // 2
-                                                                                             // (measurementArea -> measurementAreaId, voronoiArea -> voronoiMeasurementAreaId)
+      // 2
+      // (measurementArea -> measurementAreaId, voronoiArea -> voronoiMeasurementAreaId)
       "org.vadere.simulator.projects.dataprocessing.processor.AreaDensityVoronoiProcessor", // type
-                                                                                            // 2
-                                                                                            // (voronoiArea -> voronoiMeasurementAreaId)
+      // 2
+      // (voronoiArea -> voronoiMeasurementAreaId)
     };
 
     for (String type : processorTypes) {

@@ -337,7 +337,7 @@ public class ProjectView extends JFrame
     setDefaultCloseOperation(
         WindowConstants
             .DO_NOTHING_ON_CLOSE); // DO_NOTHING_ON_CLOSE so that the cancel button on the "save
-                                   // project on exit" question does not cause the windows to close.
+    // project on exit" question does not cause the windows to close.
 
     ActionCloseApplication closeApplicationAction =
         new ActionCloseApplication(Messages.getString("ProjectView.mntmExit.text"), model);
@@ -358,7 +358,7 @@ public class ProjectView extends JFrame
 
     this.addWindowListener(
         new WindowAdapter() { // always ask the user if the current project should be saved before
-                              // exit.
+          // exit.
           @Override
           public void windowClosing(java.awt.event.WindowEvent windowEvent) {
             closeApplicationAction.actionPerformed(null);
@@ -921,7 +921,7 @@ public class ProjectView extends JFrame
     scenarioJPanel = new ScenarioPanel(model);
     model.setScenarioNamePanel(
         scenarioNamePanel); // TODO [priority=low] [task=refactoring] breaking mvc pattern (?) - but
-                            // I need access to refresh the scenarioName
+    // I need access to refresh the scenarioName
     model.addProjectChangeListener(scenarioJPanel);
     rightSidePanel.add(scenarioJPanel, BorderLayout.CENTER);
     return rightSidePanel;

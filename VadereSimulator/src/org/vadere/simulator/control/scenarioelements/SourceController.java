@@ -25,7 +25,7 @@ public abstract class SourceController extends ScenarioElementController
 
   protected final double BUFFER_CA =
       0.01; // amount of overlap between spawned agents that is allowed in order to allow touching
-            // agents in CA
+  // agents in CA
   protected final double NO_EVENT = Double.MAX_VALUE;
   protected static Logger logger = Logger.getLogger(SourceController.class);
 

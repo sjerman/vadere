@@ -121,14 +121,14 @@ public class ScenarioRun implements Runnable {
     this.scenario = scenario;
     this.scenario.setSimulationRunning(
         true); // create copy of ScenarioStore and redirect getScenarioStore to this copy for
-               // simulation.
+    // simulation.
     this.scenarioStore = scenario.getScenarioStore();
     this.dataProcessingJsonManager = scenario.getDataProcessingJsonManager();
     this.setOutputPaths(
         Paths.get(outputDir),
         overwriteTimestampSetting); // TODO [priority=high] [task=bugfix] [Error?] this is a
-                                    // relative path. If you start the application via eclipse this
-                                    // will be VadereParent/output
+    // relative path. If you start the application via eclipse this
+    // will be VadereParent/output
     this.finishedListener = scenarioFinishedListener;
     this.simulationResult = new SimulationResult(scenario.getName());
     this.scenarioFilePath = scenarioFilePath;
@@ -303,7 +303,7 @@ public class ScenarioRun implements Runnable {
 
     scenario.setSimulationRunning(
         false); // remove  simulation copy of ScenarioStore and redirect getScenarioStore to base
-                // copy.
+    // copy.
     logger.info(String.format("Simulation of scenario %s finished.", scenario.getName()));
   }
 

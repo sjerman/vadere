@@ -45,7 +45,7 @@ public class ScenarioPanel extends JPanel
   private TopographyWindow topographyCreatorView; // Topography creator tab... OR:
   private final PostvisualizationWindow
       postVisualizationView; // Post-Visualization tab, replaces Topography tab if output is
-                             // selected
+  // selected
 
   // during simulation-run, only this is shown instead of the tabs above:
   private final OnlineVisualization onlineVisualization;
@@ -331,7 +331,7 @@ public class ScenarioPanel extends JPanel
       postVisualizationView.revalidate();
       postVisualizationView
           .repaint(); // force a repaint, otherwise it sometimes only repaints when the mouse moves
-                      // from the output table to the postvis-view
+      // from the output table to the postvis-view
       postVisualizationView.getDefaultModel().resetTopographySize();
     }
 

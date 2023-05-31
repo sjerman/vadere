@@ -196,7 +196,7 @@ public class TextScenarioPrinter {
           if (type.contains("id")) {
             number -=
                 1; // remove the initial number, as ids in each letter definition file start with
-                   // one, not zero.
+            // one, not zero.
             number += targetCounter;
             targetCounterAdd++;
 
@@ -204,7 +204,7 @@ public class TextScenarioPrinter {
           } else if (type.contains("targetId")) {
             number -=
                 1; // remove the initial number, as ids in each letter definition file start with
-                   // one, not zero.
+            // one, not zero.
             number += targetCounter;
             tempBuff.append(String.format(type + "=\"%.0f\"", number));
           } else

@@ -103,8 +103,8 @@ public class Scenario {
                 if (!orig.contains("hash")
                     && !rev.contains(
                         ("hash"))) // TODO [priority=medium] [task=check] is "hash" a solid enough
-                                   // identifier? might checking orig be enough?
-                diff.append(
+                  // identifier? might checking orig be enough?
+                  diff.append(
                       "\n- line " + delta.getOriginal().getPosition() + ": " + orig + " to " + rev);
               });
       return diff.toString();

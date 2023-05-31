@@ -1,6 +1,5 @@
 package org.vadere.state.traci;
 
-
 public class TraCICommandCreationException extends TraCIException {
   public TraCICommandCreationException(String message) {
     super(message);

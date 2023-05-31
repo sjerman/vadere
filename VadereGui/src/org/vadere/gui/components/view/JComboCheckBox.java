@@ -14,7 +14,7 @@ public class JComboCheckBox<E> extends JComboBox {
 
   private Map<Object, Boolean> memory =
       new HashMap<>(); // keys are the entries of the comboBox (that get rendered via toString()),
-                       // values are true or false (=checkBox checked or not)
+  // values are true or false (=checkBox checked or not)
   private String NO_CHECKED_ITEMS_TEXT = " ";
 
   public JComboCheckBox(List<E> items) {

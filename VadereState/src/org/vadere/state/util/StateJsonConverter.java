@@ -431,7 +431,7 @@ public abstract class StateJsonConverter {
                         ped,
                         JsonNode
                             .class))); // TODO [priority=medium] [task=check] initial elements is
-                                       // the right list, isn't it?
+    // the right list, isn't it?
     topography
         .getCarDynamicElements()
         .getInitialElements()

@@ -2,8 +2,6 @@ package org.vadere.state.simulation;
 
 // @author Christina Mayr
 
-
-
 public class InformationDegree {
 
   private final double percentageInformed;

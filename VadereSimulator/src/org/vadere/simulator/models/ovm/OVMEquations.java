@@ -209,7 +209,7 @@ public class OVMEquations extends AbstractModelEquations<Car> implements IAsyncC
     double mySpeed =
         myVelocity
             .x; // only the x coordinate is set. Do NOT use "length" here, otherwise negative speeds
-                // occur.
+    // occur.
 
     // velocity is just passed through, but rotated so that the vector points in target
     // direction

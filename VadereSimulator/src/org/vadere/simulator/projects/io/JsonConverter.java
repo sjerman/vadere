@@ -31,7 +31,7 @@ public class JsonConverter {
     JsonNode mainModel = node.get(StateJsonConverter.MAIN_MODEL_KEY);
     if (!mainModel
         .isNull()) { // avoid test-instantiating when mainModel isn't set, otherwise user has
-                     // invalid json when creating a new scenario
+      // invalid json when creating a new scenario
       DynamicClassInstantiator<MainModel> instantiator = new DynamicClassInstantiator<>();
       mainModelString = mainModel.asText();
       // instantiate to get an topographyError if the string can't be mapped onto a model

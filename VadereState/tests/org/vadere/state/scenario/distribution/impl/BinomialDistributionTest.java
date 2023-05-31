@@ -2,7 +2,9 @@ package org.vadere.state.scenario.distribution.impl;
 
 import static org.junit.Assert.assertEquals;
 
+import org.apache.commons.math3.random.JDKRandomGenerator;
 import org.apache.commons.math3.random.RandomGenerator;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -51,5 +53,20 @@ public class BinomialDistributionTest extends VadereDistributionTest {
 
     assertEquals(sample + timeCurrentEvent, actual, 0);
     Mockito.verify(distMock).sample();
+  }
+
+  @Test
+  public void properTest() throws Exception {
+
+    AttributesBinomialDistribution parameter = new AttributesBinomialDistribution();
+    parameter.setP(0.4);
+    parameter.setTrials(5);
+    RandomGenerator randomGenerator = new JDKRandomGenerator();
+
+    BinomialDistribution dist = new BinomialDistribution(parameter, randomGenerator);
+
+    for (int n = 0; n < 100; n++) {
+      System.out.println(dist.getNextSample(0));
+    }
   }
 }

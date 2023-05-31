@@ -437,11 +437,11 @@ public class SimulationCommandHandler extends CommandHandler<SimulationVar> {
             departed.removeAll(
                 allPrevious
                     .getSecond()); // departed (newly created): Ids which were ARE present at time t
-                                   // but were not at time t-1
+            // but were not at time t-1
             Set<Integer> arrived = new HashSet<>(allPrevious.getSecond()); // copy
             arrived.removeAll(
                 all_now); // arrived (removed in this timestep): Ids which are NOT present at time t
-                          // but were at time t-1
+            // but were at time t-1
             allPrevious = Pair.create(state.getSimTimeInSec(), all_now);
             departedCache =
                 Pair.create(

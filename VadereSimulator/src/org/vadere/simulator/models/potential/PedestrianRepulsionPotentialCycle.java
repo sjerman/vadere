@@ -41,9 +41,8 @@ public class PedestrianRepulsionPotentialCycle implements PotentialFieldAgent {
       VPoint shiftPos =
           new VPoint(
               pos.getX() + teleporter.getTeleporterShift().x,
-              pos
-                  .getY()); // TODO [priority=medium] [task=feature] the y coordinate of the
-                            // teleporter is not used yet
+              pos.getY()); // TODO [priority=medium] [task=feature] the y coordinate of the
+      // teleporter is not used yet
 
       // TODO [priority=low] [task=refactoring] find a better way to get the close pedestrians in
       // this case
@@ -57,9 +56,8 @@ public class PedestrianRepulsionPotentialCycle implements PotentialFieldAgent {
       shiftPos =
           new VPoint(
               pos.getX() - teleporter.getTeleporterShift().x,
-              pos
-                  .getY()); // TODO [priority=low] [task=refactoring] the y coordinate of the
-                            // teleporter is not used yet
+              pos.getY()); // TODO [priority=low] [task=refactoring] the y coordinate of the
+      // teleporter is not used yet
 
       // TODO [task=refactoring] [priority=low] find a better way to get the close pedestrians in
       // this case

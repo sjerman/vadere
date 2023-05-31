@@ -49,7 +49,7 @@ public class ProjectViewModel implements IScenarioChecker {
   private final Collection<IProjectChangeListener> projectChangeListeners;
   private ScenarioNamePanel
       scenarioNamePanel; // to add or remove the "*" to indicate unsaved changes and ScenarioChecker
-                         // indicator
+  // indicator
   private boolean showSimulationResultDialog;
 
   public ProjectViewModel() {
@@ -131,7 +131,7 @@ public class ProjectViewModel implements IScenarioChecker {
     List<Scenario> scenarios = new ArrayList<>();
     Arrays.stream(rows)
         .boxed() // TODO code [priority=medium] [task=refactoring] copied from deleteScenarios(),
-                 // might be possible simpler?
+        // might be possible simpler?
         .sorted((row1, row2) -> row2 - row1)
         .map(i -> getScenarioTableModel().getValue(i))
         .map(scenarioDisplay -> scenarioDisplay.scenarioRM)

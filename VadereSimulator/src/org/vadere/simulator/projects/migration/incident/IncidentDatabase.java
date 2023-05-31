@@ -68,7 +68,7 @@ public class IncidentDatabase {
     addIncident(
         NOT_A_RELEASE,
         new MissingMainModelIncident( // must come AFTER the model renaming that was done in the
-                                      // loop before
+            // loop before
             path("vadere"), StateJsonConverter.MAIN_MODEL_KEY, path("vadere", "attributesModel")));
 
     addIncident(NOT_A_RELEASE, new AddTextNodeIncident(path(), "description", ""));

@@ -41,9 +41,9 @@ public class VTable<D> extends JTable {
               if (!ArrayUtils.contains(
                   VTable.this.getSelectedRows(),
                   row)) { // If the right-click did not happen on one of the selected rows -> select
-                          // only this row before proceeding with right-click action. This is the
-                          // behavior how one would expect it (windows explorer does it that way),
-                          // otherwise accidental deletions could happen
+                // only this row before proceeding with right-click action. This is the
+                // behavior how one would expect it (windows explorer does it that way),
+                // otherwise accidental deletions could happen
                 VTable.this.setRowSelectionInterval(row, row);
               }
 

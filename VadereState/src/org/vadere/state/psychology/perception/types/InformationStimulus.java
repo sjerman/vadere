@@ -1,6 +1,5 @@
 package org.vadere.state.psychology.perception.types;
 
-
 /** Class encodes some kind of information a pedestrian knows about. */
 public class InformationStimulus extends Stimulus {
 

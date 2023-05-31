@@ -50,7 +50,7 @@ public class PedestrianMetricOptimizationProcessor
               singleMetric);
         }
       } // else (if empty) do nothing, no event occured for this pedestrians in the last simulation
-        // step.
+      // step.
     }
   }
 

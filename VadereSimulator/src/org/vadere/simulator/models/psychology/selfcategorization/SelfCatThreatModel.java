@@ -231,7 +231,7 @@ public class SelfCatThreatModel implements MainModel {
     randomGenerator.setSeed(seed);
     int trials =
         BINOMIAL_DISTRIBUTION_SUCCESS_VALUE; // I.e., possible outcomes are 0 and 1 when calling
-                                             // "sample()".
+    // "sample()".
 
     return new BinomialDistribution(randomGenerator, trials, probabilityForInGroupMembership);
   }

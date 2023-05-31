@@ -175,7 +175,7 @@ class DataProcessingView extends JPanel implements IJsonView {
     activeJsonView.isEditable(isEditable);
     processorsMenu.setEnabled(
         isEditable); // this is a bit of a hack, it would be nicer to place all menus inside
-                     // TextView and control enablement there
+    // TextView and control enablement there
   }
 
   private class GuiView extends JPanel implements IJsonView {
@@ -739,7 +739,7 @@ class DataProcessingView extends JPanel implements IJsonView {
                       dataProcessor ->
                           getDataKeyForDataProcessor(dataProcessor)
                               == outputFileDataKey) // only show processors with same DataKey as
-                                                    // outputFile
+                  // outputFile
                   .map(DataProcessor::getId)
                   .collect(Collectors.toList()));
       comboBox.setCheckedItems(outputFile.getProcessorIds());
@@ -757,7 +757,7 @@ class DataProcessingView extends JPanel implements IJsonView {
 
       revalidate();
       repaint(); // inelegantly, it needs both revalidate() and repaint()
-                 // stackoverflow.com/a/5812780
+      // stackoverflow.com/a/5812780
     }
 
     private void handleDataProcessorSelected(DataProcessor dataProcessor) {
@@ -829,7 +829,7 @@ class DataProcessingView extends JPanel implements IJsonView {
           new Dimension(
               dataProcessorsDetailsPanel.getWidth() - 30,
               145)); // hackish, but didn't find another way from avoiding the JScrollPane to break
-                     // through the east border with full length
+      // through the east border with full length
       panel.add(jsonScrollPane, c);
 
       attributesTextArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JSON);
@@ -898,9 +898,8 @@ class DataProcessingView extends JPanel implements IJsonView {
     private Type getDataKeyForDataProcessor(Object object) {
       Class cls = object.getClass();
       while (cls.getSuperclass()
-          != DataProcessor
-              .class) { // climb up until we can get the DataKey from the highest class
-                        // DataProcessor
+          != DataProcessor.class) { // climb up until we can get the DataKey from the highest class
+        // DataProcessor
         cls = cls.getSuperclass();
       }
       return ((ParameterizedType) cls.getGenericSuperclass()).getActualTypeArguments()[0];

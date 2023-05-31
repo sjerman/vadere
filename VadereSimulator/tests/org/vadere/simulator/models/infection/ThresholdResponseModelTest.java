@@ -32,7 +32,7 @@ public class ThresholdResponseModelTest {
     attributesList = new ArrayList<>();
     attributesList.add(
         new AttributesProximityExposureModel()); // alternatively use any other class extending
-                                                 // AbstractExposureModel
+    // AbstractExposureModel
     attributesList.add(new AttributesThresholdResponseModel());
     thresholdResponseModel = new ThresholdResponseModel();
     topography = new Topography();

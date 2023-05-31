@@ -183,7 +183,7 @@ public class IncidentMigrationAssistant extends MigrationAssistant {
 
       } else if (migrationOptions
           .isReapplyLatestMigrationFlag()) { // if enforced migration should be done from prev
-                                             // version to latest
+        // version to latest
         Optional<Version> optVersion = Version.getPrevious(version);
         if (optVersion.isPresent()) {
           version = optVersion.get();
@@ -191,7 +191,7 @@ public class IncidentMigrationAssistant extends MigrationAssistant {
           return false;
         }
       } // if no enforced migration should be done and we are at the latest version, no migration is
-        // required.
+      // required.
       else if (version == Version.latest()) {
         return false;
       }

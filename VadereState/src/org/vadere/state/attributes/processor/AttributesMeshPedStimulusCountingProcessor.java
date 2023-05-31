@@ -1,6 +1,5 @@
 package org.vadere.state.attributes.processor;
 
-
 public class AttributesMeshPedStimulusCountingProcessor
     extends AttributesMeshDensityCountingProcessor {
 

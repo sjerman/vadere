@@ -253,7 +253,7 @@ public class TextView extends JPanel implements IJsonView {
               String json =
                   textfileTextarea
                       .getText(); // TODO [priority=medium] [task=bugfix] this can sometimes give
-                                  // the wrong text if an integer is added at the end of
+              // the wrong text if an integer is added at the end of
               // random-seed in simulation tab, very weird, investigate...
               if (json.length() == 0) return;
 
@@ -432,9 +432,8 @@ public class TextView extends JPanel implements IJsonView {
 
   @Override
   public void setVadereScenario(
-      Scenario
-          scenario) { // in order to avoid passing the exception upwards. might not be the best
-                      // solution
+      Scenario scenario) { // in order to avoid passing the exception upwards. might not be the best
+    // solution
     try {
       setVadereScenarioThrows(scenario);
     } catch (JsonProcessingException e) {

@@ -26,11 +26,11 @@ public class V07ToV08Test extends JsonTransformationTest {
   public void testTyp1() throws MigrationException {
     String[] processorTypes = {
       "org.vadere.simulator.projects.dataprocessing.processor.FundamentalDiagramBProcessor", // type
-                                                                                             // 1
-                                                                                             // (measurementArea -> measurementAreaId)
+      // 1
+      // (measurementArea -> measurementAreaId)
       "org.vadere.simulator.projects.dataprocessing.processor.FundamentalDiagramCProcessor", // type
-                                                                                             // 1
-                                                                                             // (measurementArea -> measurementAreaId)
+      // 1
+      // (measurementArea -> measurementAreaId)
     };
 
     String jsonStr = getTestFileAsString("typ1.scenario");
@@ -57,14 +57,14 @@ public class V07ToV08Test extends JsonTransformationTest {
   public void testTyp2() throws MigrationException {
     String[] processorTypes = {
       "org.vadere.simulator.projects.dataprocessing.processor.FundamentalDiagramDProcessor", // type
-                                                                                             // 2
-                                                                                             // (measurementArea -> measurementAreaId, voronoiArea -> voronoiMeasurementAreaId)
+      // 2
+      // (measurementArea -> measurementAreaId, voronoiArea -> voronoiMeasurementAreaId)
       "org.vadere.simulator.projects.dataprocessing.processor.FundamentalDiagramEProcessor", // type
-                                                                                             // 2
-                                                                                             // (measurementArea -> measurementAreaId, voronoiArea -> voronoiMeasurementAreaId)
+      // 2
+      // (measurementArea -> measurementAreaId, voronoiArea -> voronoiMeasurementAreaId)
       "org.vadere.simulator.projects.dataprocessing.processor.AreaDensityVoronoiProcessor", // type
-                                                                                            // 2
-                                                                                            // (measurementArea -> measurementAreaId, voronoiArea -> voronoiMeasurementAreaId)
+      // 2
+      // (measurementArea -> measurementAreaId, voronoiArea -> voronoiMeasurementAreaId)
     };
 
     String jsonStr = getTestFileAsString("typ2.scenario");

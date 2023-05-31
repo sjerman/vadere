@@ -36,12 +36,12 @@ public class JacksonObjectMapper extends ObjectMapper {
     configure(
         DeserializationFeature.ACCEPT_FLOAT_AS_INT,
         true); // otherwise 4.7 will automatically be casted to 4 for integers, with this it throws
-               // an error
+    // an error
     enable(JsonParser.Feature.STRICT_DUPLICATE_DETECTION); // forbids duplicate keys
     disable(
         SerializationFeature
             .FAIL_ON_EMPTY_BEANS); // to allow empty attributes like "attributes.SeatingAttr": {},
-                                   // useful while in dev
+    // useful while in dev
     setVisibility(
         PropertyAccessor.FIELD,
         JsonAutoDetect.Visibility.ANY); // otherwise private fields won't be usable
@@ -57,7 +57,7 @@ public class JacksonObjectMapper extends ObjectMapper {
         boolean.class,
         new JsonDeserializer<
             Boolean>() { // make boolean parsing more strict, otherwise integers are accepted with
-                         // 0=false and all other integers=true
+          // 0=false and all other integers=true
           @Override
           public Boolean deserialize(
               JsonParser jsonParser, DeserializationContext deserializationContext)
@@ -134,7 +134,7 @@ public class JacksonObjectMapper extends ObjectMapper {
                     serializeVRectangle(
                         (VRectangle)
                             vShape)); // this doesn't seem to get called ever, the VRectangle
-                                      // serializer always seem to get called
+                // serializer always seem to get called
                 break;
               default:
                 break;

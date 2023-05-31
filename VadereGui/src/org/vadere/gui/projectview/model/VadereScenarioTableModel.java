@@ -84,7 +84,7 @@ public class VadereScenarioTableModel
         "Can't find row in scenarioTable corresponding to scenario "
             + value
                 .getName()); // if we'd return -1 as before, this throws in-thread errors that are
-                             // difficult to debug because of the lack of a stacktrace!
+    // difficult to debug because of the lack of a stacktrace!
   }
 
   public synchronized boolean remove(final Scenario value) {

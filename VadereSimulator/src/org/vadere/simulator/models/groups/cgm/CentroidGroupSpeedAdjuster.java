@@ -54,7 +54,7 @@ public class CentroidGroupSpeedAdjuster implements SpeedAdjuster {
             }
             group.setLostMember(
                 ped); // TODO: [priority=low] [task=refactoring]  do not set lost members in the
-                      // speed adjuster
+            // speed adjuster
           }
         }
       }
@@ -72,7 +72,7 @@ public class CentroidGroupSpeedAdjuster implements SpeedAdjuster {
             if (groupCollection.getAttributesCGM().isLostMembers()) {
               group.setLostMember(
                   ped); // TODO: [priority=low] [task=refactoring]  do not set lost members in the
-                        // speed adjuster
+              // speed adjuster
             }
           }
           // else: do not wait, treat group member as "lost"
@@ -91,7 +91,7 @@ public class CentroidGroupSpeedAdjuster implements SpeedAdjuster {
             if (!group.isCentroidWithinObstacle()) {
               group.setLostMember(
                   ped); // TODO: [priority=low] [task=refactoring]  do not set lost members in the
-                        // speed adjuster
+              // speed adjuster
             }
           }
         }

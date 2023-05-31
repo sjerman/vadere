@@ -121,7 +121,7 @@ public class AreaDensityGridSpatialTimeProcessor
         if (fs.getStartTime()
             < nextTime
                 + timeWindowSize) { // necessary check in case intermediate step was added which
-                                    // passed the end of the time window already
+          // passed the end of the time window already
           fsResult = computeCellForFootStep(fs, currentCell, timeInCell, gridIdx, ped);
           currentCell = fsResult.getLeft();
           timeInCell = fsResult.getRight();
@@ -194,7 +194,7 @@ public class AreaDensityGridSpatialTimeProcessor
               Math.max(
                   skippedDuration,
                   0.0); // emergency solution so missing time is not lost, even though agent has not
-                        // entered yettimeInCell = 0.0;
+          // entered yettimeInCell = 0.0;
         }
       } else {
         timeInCell = 0.0;

@@ -180,9 +180,8 @@ public class Tree {
    */
   public List<Node> recursiveScan(
       final Node parentCandidate, final String parentKey, final String key, final Incident caller)
-      throws
-          MigrationException { // the alternative would be to collect all leaves and check their
-                               // parents
+      throws MigrationException { // the alternative would be to collect all leaves and check their
+    // parents
     List<Node> foundNodes = new LinkedList<>();
     recursiveScan(parentCandidate, parentKey, key, foundNodes);
     return foundNodes;
@@ -292,10 +291,8 @@ public class Tree {
         JsonNode value = entry.get(oldName);
         ((ObjectNode) entry).remove(oldName);
         ((ObjectNode) entry)
-            .set(
-                newName,
-                value); // will be added as last element, not same index as oldName was
-                        // unfortunately
+            .set(newName, value); // will be added as last element, not same index as oldName was
+        // unfortunately
       }
     }
   }

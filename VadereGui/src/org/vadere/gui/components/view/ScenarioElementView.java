@@ -152,8 +152,8 @@ public class ScenarioElementView extends JPanel
           ((TopographyCreatorModel) panelModel)
               .getScenario()
               .updateCurrentStateSerialized(); // casting should be safe her because in the other
-                                               // two modes (onlineVis and postVis), updateModel()
-                                               // won't be called because it's set to uneditable
+          // two modes (onlineVis and postVis), updateModel()
+          // won't be called because it's set to uneditable
         } catch (IOException e) {
           ScenarioPanel.setActiveJsonParsingErrorMsg(
               "TOPOGRAPHY CREATOR tab:\n" + e.getMessage()); // add name of scenario element?

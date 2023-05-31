@@ -1,6 +1,5 @@
 package org.vadere.state.psychology.perception.types;
 
-
 /**
  * Class representing an elapsed time step.
  *

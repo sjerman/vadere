@@ -296,7 +296,7 @@ public class SettingsDialog extends JDialog {
     int nOnlineVisualizationCells = 9;
     int nPostVisualizationCells =
         6; // org.vadere.gui.postvisualization.view.SettingsDialog adds n cells (rows) to
-           // settingsPane
+    // settingsPane
     FormLayout pedColorLayout =
         new FormLayout(
             "5dlu, pref, 2dlu, pref, 2dlu, pref:grow, 2dlu, pref, 2dlu, pref, 5dlu",

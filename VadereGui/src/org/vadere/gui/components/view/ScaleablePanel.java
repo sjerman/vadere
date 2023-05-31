@@ -64,7 +64,7 @@ public abstract class ScaleablePanel extends JPanel implements IScaleChangeListe
               new VPoint(
                   viewport
                       .getViewPosition())); // mouse pos on the canvas (independent of viewport), in
-                                            // pixel coordinates
+      // pixel coordinates
 
       setPreferredSize(
           new Dimension(
@@ -78,14 +78,14 @@ public abstract class ScaleablePanel extends JPanel implements IScaleChangeListe
       VPoint diffAbsMousePos =
           newAbsMousePos.subtract(
               absMousePos); // the difference between the old and new absolute mouse pos is
-                            // equivalent to what we want to translate the viewport-viewPosition,
-                            // because then the focus point stays at the same position
+      // equivalent to what we want to translate the viewport-viewPosition,
+      // because then the focus point stays at the same position
 
       double widthDiff = getPreferredSize().getWidth() - viewport.getBounds().getWidth();
       boolean outOfViewportInWidth = widthDiff > 0;
       double viewportMoveX =
           0; // the ideal diffAbsMousePos can only be applied if the canvas is beyond the viewport
-             // borders with more than diffAbsMousePos
+      // borders with more than diffAbsMousePos
       if (outOfViewportInWidth) {
         viewportMoveX =
             diffAbsMousePos
@@ -117,7 +117,7 @@ public abstract class ScaleablePanel extends JPanel implements IScaleChangeListe
               new VPoint(
                   viewport
                       .getViewPosition())); // in case of no new mouse movement, this will be used
-                                            // in next zoom
+      // in next zoom
     }
     revalidate();
   }

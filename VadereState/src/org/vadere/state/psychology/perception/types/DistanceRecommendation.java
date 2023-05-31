@@ -1,6 +1,5 @@
 package org.vadere.state.psychology.perception.types;
 
-
 /** Class can signal agents to wait - for instance at a red traffic light. */
 public class DistanceRecommendation extends Stimulus {
 
