@@ -8,7 +8,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>gui</artifactId>
-    <name>VadereGUI</name>
+    <name>Vadere GUI</name>
     <description>A test suite for the Vadere simulator.</description>
     <properties>
         <maven.build.timestamp.format>yyyyMMddhhmm</maven.build.timestamp.format>
@@ -33,6 +33,7 @@
             <artifactId>utils</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.fifesoft</groupId>
             <artifactId>rsyntaxtextarea</artifactId>
@@ -53,12 +54,21 @@
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>1.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
         </dependency>
         <dependency>
             <groupId>it.tidalwave.betterbeansbinding</groupId>
             <artifactId>betterbeansbinding-core</artifactId>
             <version>1.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>net.sf.squirrel-sql.thirdpary-non-maven</groupId>
@@ -107,8 +117,7 @@
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>1.9.5</version>
+            <artifactId>mockito-core</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -119,33 +128,7 @@
 
     </dependencies>
     <build>
-        <sourceDirectory>src</sourceDirectory>
-        <testSourceDirectory>tests</testSourceDirectory>
-        <resources>
-            <resource>
-                <directory>src</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </resource>
-            <resource>
-                <directory>resources</directory>
-            </resource>
-        </resources>
-
-        <testResources>
-            <testResource>
-                <directory>testResources</directory>
-            </testResource>
-            <testResource>
-                <directory>tests</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </testResource>
-        </testResources>
         <plugins>
-
             <plugin>
                 <!-- Use default groupId "org.apache.maven.plugins" -->
                 <artifactId>maven-assembly-plugin</artifactId>

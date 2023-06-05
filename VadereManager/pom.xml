@@ -17,6 +17,19 @@
             <artifactId>annotation</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>gui</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>simulator</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
         <!--         module dependencies-->
         <dependency>
             <groupId>${project.groupId}</groupId>
@@ -25,50 +38,39 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
+            <artifactId>testutils</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
             <artifactId>utils</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.vadere</groupId>
-            <artifactId>gui</artifactId>
-            <version>0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
-            <groupId>org.vadere</groupId>
-            <artifactId>simulator</artifactId>
-            <version>0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>net.sf.py4j</groupId>
+            <artifactId>py4j</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
-        <sourceDirectory>src</sourceDirectory>
-        <testSourceDirectory>tests</testSourceDirectory>
-        <resources>
-            <resource>
-                <directory>src</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </resource>
-            <resource>
-                <directory>resources</directory>
-            </resource>
-        </resources>
-        <testResources>
-            <testResource>
-                <directory>testResources</directory>
-            </testResource>
-            <testResource>
-                <directory>tests</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </testResource>
-        </testResources>
         <plugins>
             <plugin>
                 <groupId>com.nativelibs4java</groupId>
@@ -88,6 +90,28 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>2.4</version>
                 <executions>
+                    <execution>
+                        <id>build-test-client</id>
+                        <!-- this is used for inheritance merges -->
+                        <phase>package</phase>
+                        <!-- bind to the packaging phase -->
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <mainClass>org.vadere.manager.client.TestClient</mainClass>
+                                </manifest>
+                            </archive>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                            <finalName>vadere-tc</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <attach>false</attach>
+                        </configuration>
+                    </execution>
                     <execution>
                         <id>build-vadere-server</id>
                         <!-- this is used for inheritance merges -->
@@ -170,7 +194,7 @@
                         <argument>rev-parse</argument>
                         <argument>HEAD</argument>
                     </arguments>
-                    <outputFile>resources/current_commit_hash.txt</outputFile>
+                    <outputFile>target/classes/current_commit_hash.txt</outputFile>
                 </configuration>
             </plugin>
         </plugins>
