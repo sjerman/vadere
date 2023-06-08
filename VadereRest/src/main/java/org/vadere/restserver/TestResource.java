@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class TestResource {
 
-  @GetMapping(value = "/login-logo", produces = MediaType.TEXT_PLAIN_VALUE)
+  @GetMapping(value = "/ping", produces = MediaType.TEXT_PLAIN_VALUE)
   public String ping() {
     return "ok";
   }
