@@ -102,7 +102,7 @@ public abstract class OutputFile<K extends DataKey<K>> {
 
   public void write() {
     if (!isEmpty()) {
-      logger.info("Absolute file name" + absoluteFileName);
+      logger.info("Absolute file name: " + absoluteFileName);
       try (VadereWriter out = writerFactory.create(absoluteFileName)) {
 
         this.writer = out;
